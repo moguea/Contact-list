@@ -41,10 +41,21 @@ let listaDeContactos = [
         }
       },
     ];
-    
+  
+  ///Editar contacto
+const editButtons = document.getElementsByClassName("edit-button");
+function handleEditContact(event) {
+  const contactId = event.target.dataset.contactId;
+  console.log("Editar contacto con ID:", contactId);
+}
+
+
 // Función para añadir un nuevo contacto a la lista
 function agregarContacto(contacto) {
     listaDeContactos.push(contacto);
+}
+for (let i = 0; i < editButtons.length; i++) {
+  editButtons[i].addEventListener("click", handleEditContact);
 }
 
 // Función para borrar un contacto existente de la lista
@@ -84,3 +95,5 @@ imprimirContactos();
   
   console.log("Lista después de borrar un contacto:");
   imprimirContactos();
+
+  
