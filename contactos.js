@@ -41,15 +41,8 @@ let listaDeContactos = [
         }
       },
     ];
-    
- 
-  <ul id="listaDeContactos ">
-  <li class="contacto">
-    <h3>Luis moguea</h3>
-    <p>luismoguea947@gmail.com</p>
-    <button class="edit-button" data-contact-id="1">Editar</button>
-  </li>
   
+  ///Editar contacto
 const editButtons = document.getElementsByClassName("edit-button");
 function handleEditContact(event) {
   const contactId = event.target.dataset.contactId;
